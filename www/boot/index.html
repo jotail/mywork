@@ -1,3 +1,8 @@
+<?php
+include_once('./_common.php');
+include_once(G5_LIB_PATH.'/latest.lib.php');
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -18,7 +23,7 @@
   <meta charset="utf-8">
   <meta content="yes" name="apple-mobile-web-app-capable" />
   <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
-  <title>야마하 L-series</title>
+  <title><?php echo $g5_head_title; ?></title>
   <meta name="format-detection" content="telephone=no">
   <!--	번호클릭시 전화로 돌아가는거 방지 -->
   <meta name="robots" content="all">
@@ -60,6 +65,22 @@
   <script src="js/jquery.tubular.1.0.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
   <!-- <script src="js/template.js"></script> -->
+	
+  <script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "<?php echo G5_URL ?>";
+var g5_bbs_url   = "<?php echo G5_BBS_URL ?>";
+var g5_is_member = "<?php echo isset($is_member)?$is_member:''; ?>";
+var g5_is_admin  = "<?php echo isset($is_admin)?$is_admin:''; ?>";
+var g5_is_mobile = "<?php echo G5_IS_MOBILE ?>";
+var g5_bo_table  = "<?php echo isset($bo_table)?$bo_table:''; ?>";
+var g5_sca       = "<?php echo isset($sca)?$sca:''; ?>";
+var g5_editor    = "<?php echo ($config['cf_editor'] && $board['bo_use_dhtml_editor'])?$config['cf_editor']:''; ?>";
+var g5_cookie_domain = "<?php echo G5_COOKIE_DOMAIN ?>";
+<?php if(defined('G5_IS_ADMIN')) { ?>
+var g5_admin_url = "<?php echo G5_ADMIN_URL; ?>";
+<?php } ?>
+</script>
 
 </head>
 
@@ -71,6 +92,53 @@
           <div class="container">
             <a class="navbar-brand" href="#"><img src="img/ylogo.svg" alt=""></a>
             <div class="collapse navbar-collapse" id="navbarNav">
+				
+				
+				
+				<ul class="navbar-nav navbar-nav2">
+                
+                <?php
+				$menu_datas = get_menu_db(0, true);
+				$gnb_zindex = 999; // gnb_1dli z-index 값 설정용
+                $i = 0;
+                foreach( $menu_datas as $row ){
+                    if( empty($row) ) continue;
+                    $add_class = (isset($row['sub']) && $row['sub']) ? 'gnb_al_li_plus' : '';
+                ?>
+                <li class="nav-item">
+                    <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="nav-link"><?php echo $row['me_name'] ?></a>
+                    <?php
+                    $k = 0;
+                    foreach( (array) $row['sub'] as $row2 ){
+
+                        if( empty($row2) ) continue; 
+
+                        if($k == 0)
+                            echo '<span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">'.PHP_EOL;
+                    ?>
+                        <li class="gnb_2dli"><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>" class="gnb_2da"><?php echo $row2['me_name'] ?></a></li>
+                    <?php
+                    $k++;
+                    }   //end foreach $row2
+
+                    if($k > 0)
+                        echo '</ul></div>'.PHP_EOL;
+                    ?>
+                </li>
+                <?php
+                $i++;
+                }   //end foreach $row
+
+                if ($i == 0) {  ?>
+                    <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
+                <?php } ?>
+            </ul>
+				
+				
+				
+				
+				
+<!--
               <ul class="navbar-nav navbar-nav2">
                 <li class="nav-item">
                   <a class="nav-link" href="#head1">L series</a>
@@ -86,6 +154,7 @@
                 </li>
               </ul>
             </div>
+-->
           </div>
         </nav>
       </div>
@@ -101,7 +170,7 @@
             <div class="slideitem" data-dot-title="아이템" style='background:url(img/slideimg/slide0.jpg) no-repeat center top; background-size:100% auto'>
               <div class="textbox1">
                 <h5 class="slideh5">l-series</h5>
-                <h6 class="slideh6">나만의 사운드</h6>
+                <h6 class="slideh6">선택과집중</h6>
                 <p><span class="slidespan">야마하에서 자신의 사운드를 찾아가세요.</span></p>
 
 
@@ -150,7 +219,7 @@
 
                 <div class="slidetext"><a href="http://www.buzzbee.co.kr/shop/goods/goods_view.php?goodsno=22046&category=002001039">자세히 알아보기</a></div>
               </div>
-
+              
             </div>
           </div>
           <div class="paginator-center text-color text-center">
@@ -162,13 +231,11 @@
     </div>
 
     <div class="container">
-      <h3 id="head1">
-        야마하 L series
-      </h3>
+     
 
-      <p id="text1">
-        풀 사이즈의 오리지널 LL 점보 바디부터, 중형 크기의 LJ 바디, 소형의 LS 바디에 이르기까지 <strong>Yamaha 기타의 바디 종류는 매우 다양합니다.</strong> 각각의 바디는 <strong>고유한 특징을</strong> 가지고 있습니다. 사운드, 스타일, 가격을 고려하여 악기를 선택 선택할 수 있습니다.
-      </p>
+
+		  <?php echo latest('basic_','skirt',1,200); ?>
+    
       <!-- START THE FEATURETTES -->
     </div>
     <div clss="container-fluid">
