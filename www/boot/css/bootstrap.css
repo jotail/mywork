@@ -7,8 +7,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;400;500;900&family=Noto+Sans+KR:wght@100;400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&display=swap');
 
-/* font-family: 'Kanit', sans-serif;
+/*
+font-family: 'Chonburi', cursive;
+font-family: 'Kanit', sans-serif;
  font-family: 'Fira Sans', sans-serif;
 font-family: 'Nanum Myeongjo', serif;
 font-family: 'Noto Sans KR', sans-serif; */
@@ -128,6 +131,7 @@ address {
 ol,
 ul,
 dl {
+  padding: 0;
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -569,11 +573,14 @@ pre code {
 }
 
 .container {
-  width: 100%;
+
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  padding-top:80px;
+  padding-bottom:80px;
+
 }
 
 @media (min-width: 576px) {
@@ -10314,26 +10321,30 @@ a.text-dark:hover, a.text-dark:focus {
 .navbar {background: white}
 .navbar-expand-lg > a > img {width: 200px;margin: 0 0 0 150px;}
 .navbar-light .navbar-nav .nav-link .navbar .fixed-top .navbar-expand-lg > div > ul > li > a {color: white}
+/*
 #head1::before {content: "" ;margin-top: 250px}
-#head1 {font-family: 'Nanum Myeongjo', serif;text-align: center;margin: 150px auto;font-size: 2em;border:2px solid #482775;padding:100px 10px;
+
+#head1 {font-family: 'Chonburi', cursive;, serif;text-align: center;margin: 150px auto;font-size: 2em;border:2px solid #482775;padding:100px 10px;
  scroll-behavior: smooth;}
+
 #text1 {font-family: 'Nanum Myeongjo', serif;margin-bottom:100px; line-height: 200%; word-spacing: 5px;font-size: 1.3em;scroll-behavior: smooth;padding: 0 5%}
 #head2 {font-family: 'Fira Sans', sans-serif;text-align: center;margin: 150px auto;font-size: 2em;border:2px solid #482775;padding:100px 10px;scroll-behavior: smooth;}
 #head3 {font-family: 'Fira Sans', sans-serif;text-align: center;margin: 150px auto;font-size: 2em;border:2px solid #482775;padding:100px 10px;scroll-behavior: smooth;}
 h2#head4 {font-family: 'Nanum Myeongjo', serif;text-align: center;margin: 150px auto;font-size: 2em;border:2px solid #482775;padding:100px 10px;
  scroll-behavior: smooth;}
-h2#head5 {font-family: 'Nanum Myeongjo', serif;text-align: center;margin: 150px auto;font-size: 2em;border:2px solid #482775;padding:100px 10px;margin-top:75%;scroll-behavior: smooth;}
-
+h2#head5 {font-family: 'Nanum Myeongjo', serif;text-align: center;margin: 150px auto;font-size: 2em;border:2px solid #482775;padding:100px 10px;margin-top:55%;scroll-behavior: smooth;}
+*/
+#modal2 div{margin:50px auto 150px auto;}
 
 #head1 a {transition: all 0.5s;scroll-behavior: smooth;}
 
 .lj {width: 450px}
 
-.container.jojo {background: #482775;color:white;scroll-behavior: smooth;}
+.jojo {background: #f1f1f1; scroll-behavior: smooth;}
 
 h2 {text-align: center;margin:30px auto; }
 
-.liston > ul > li {list-style:circle; font-family: 'Noto Sans KR', sans-serif;font-family: 'Fira Sans', sans-serif;}
+.liston{list-style:circle; font-family: 'Noto Sans KR', sans-serif;font-family: 'Fira Sans', sans-serif;}
 
 .list-inline.zkfm > li {display: inline-block; font-size: 3em;color: #222}
 
@@ -10349,7 +10360,7 @@ h2 {text-align: center;margin:30px auto; }
 
 .navbar-brand > img {width: 150px;transition: 1s}
 
-.ampimg {width:450px }
+.ampimg {width:450px; }
 
 video {
 	position : fixed;
@@ -10392,6 +10403,7 @@ video {
 .btn:not(:disabled):not(.disabled){}
   .col-md-3 {text-align:center}
   .navbar-expand-lg .navbar-nav .nav-link {color: white;}
+  .liston {padding-bottom: 30%}
 }
 
 @media screen and (max-width: 680px) {
@@ -10404,7 +10416,10 @@ video {
   .noneck img {width: 380px; margin: 50px 0;}
   .neck2 > img {width: 380px;margin: 50px 0;}
   .neck2 > img {width: 380px;margin: 50px 0;}
-  .slick-slide img {width: 400px}
+  .slick-slide img {width: 540px}
+  h2#head5 {margin-top: 100%}
+  #modal2 div{margin: 0px auto -10px auto;}
+  .navbar-brand {margin: 0}
 }
 
 @media screen and (max-width: 480px) {
@@ -10419,8 +10434,9 @@ video {
   .neck2 > img {width: 380px;margin: 50px 0;}
   .neck2 > img {width: 380px;margin: 50px 0;}
    .col-lg-12.whxodlf {width: 200px}
-  .slick-slide img {width: 250x}
+  .slick-slide img {width: 475px}
 }
+
 @media screen and (max-width: 426px){
   .nav-item a {font-size: 0.6rem}
   .nav-item {padding: padding: 0 5px;}
@@ -10433,12 +10449,12 @@ video {
   .nav-item {padding: padding: 0 3px;}
    .col-lg-12.whxodlf {width: 150px}
    .noneck img {width: 320px; margin: 50px 0;}
+   .slick-slide img {width: 357px}
 }
 @media screen and (max-width: 347px){
 .navbar-brand > img {width: 70px;margin: 6px 0 0 0;}
 .noneck img {width: 300px; margin: 50px 0;}
-
-
+.slick-slide img {width: 357px}
 }
 
 footer.footer{margin-top: 200px}
@@ -10448,4 +10464,3 @@ footer.footer{margin-top: 200px}
 .absparent iframe   {position: absolute; left: 0;top: 0; width: 100%;height: 100%;}
 #dota {color: white;font-size: 1.3em;}
 h2#dota {font-size: 40px;}
-#modal2 div{margin:50px auto 150px auto;}

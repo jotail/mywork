@@ -5,8 +5,8 @@ overflow: hidden; height:40px
 .navbar-light.navbar-expand-lg .navbar-brand img{
   transform: translateY(-56%);
 }
-.col-md-5.liston{padding-right: 25px}
-
+.col-md-5.liston{padding-right: 25px;padding-left: 25px}
+.con {margin-top: 15%}
 
 background: linear-gradient(137deg, #fff6b7, #f77c99, #6578f2, #c2ffd8);
 background-size: 800% 800%; -webkit-animation: AnimationName 16s ease infinite; -moz-animation: AnimationName 16s ease infinite; -o-animation: AnimationName 16s ease infinite; animation: AnimationName 16s ease infinite;
@@ -36,8 +36,9 @@ button::before { }
 #map {width: 1140px;
 height: 450px;
 margin-top: 6%;}
-
 #Send {margin: 0 0 0 85%!important;}
+/* 슬라이드 글자 왼쪽 */
+
 .textbox1 {position:absolute;margin:10% 0% 0% 25%;
 flex-direction: column;
 -moz-box-pack: center;
@@ -45,19 +46,25 @@ justify-content: center;
 display: flex;
 text-align: center;}
 .slideh5 {font-size:1.3rem;color:#ddd;padding: 5px 20px;line-height: 1.66;letter-spacing: 2px;text-transform: uppercase;margin-bottom: 10px;}
-
 .slideh6 {font-size:3rem;color:#ddd;padding: 5px 20px}
-
 .xodlf span {font-size:0.8rem;color:#ddd;padding: 5px 20px}
-
 .slidetext {position:relative;margin: 25px auto;}
-
-
 .slidetext a {color: white;font-size:1rem;border:2px #fff solid;padding:5px 25px;}
-
 .slidetext a:hover{color:black;background:white}
+/* 슬라이드 글자 오른쪽 */
 
-
+.textbox1_1 {position:absolute;margin:10% 0% 0% 55%;
+flex-direction: column;
+-moz-box-pack: center;
+justify-content: center;
+display: flex;
+text-align: center;}
+.slideh5_1 {font-size:1.3rem;color:#ddd;padding: 5px 20px;line-height: 1.66;letter-spacing: 2px;text-transform: uppercase;margin-bottom: 10px;}
+.slideh6_1 {font-size:3rem;color:#ddd;padding: 5px 20px}
+.xodlf .slidespan_1 {font-size:0.8rem;color:#ddd;padding: 5px 20px}
+.slidetext_1 {position:relative;margin: 25px auto;}
+.slidetext_1 a {color: white;font-size:1rem;border:2px #fff solid;padding:5px 25px;}
+.slidetext_1 a:hover{color:black;background:white}
 
 
 
@@ -152,6 +159,33 @@ text-align: center;}
     font-size: 3.5rem;
   }
 }
-
+.clear{ clear:both}
+.clear:after{ content:""; display:block; clear:both}
+.navbar .container{ padding:0}
 .span7{color:#222;display: block;text-align:center;}
 .copyright {margin:0 0 5% 0}
+
+
+.title_Tail {
+   font-family: 'Nanum Myeongjo';
+padding-top: 5px;
+padding-bottom: 40px;
+font-size: 3.2em;
+color: #222;
+font-weight: 700;
+text-align: center;
+letter-spacing: -2px;
+}
+.normalContent{
+letter-spacing: -1px;
+line-height: 2;
+text-align: center;
+font-size: 14px;}
+
+blockquote{border: 1px solid #ccc; border-width:1px 0; padding: 15px 0}
+
+blockquote .fa{color:#ccc; }
+.fa-quote-right{ margin-top:100px}
+.solar_panels_banner_area{ margin:0}
+
+.youtubeLatest{ background:#f1f1f1; margin: 15px 0 }
