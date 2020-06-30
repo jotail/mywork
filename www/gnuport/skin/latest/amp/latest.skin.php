@@ -17,8 +17,6 @@ $thumb_height=291;
           $img_content = '<img src="'.$latest_skin_url.'/img/noimage.gif" width="'.$thumb_width.'" height="'.$thumb_height.'">';
       }
 ?>
-
-
       <div class="col-md-12" id="modal2">
         <div class="row">
           <div class="col-md-7 noneck">
