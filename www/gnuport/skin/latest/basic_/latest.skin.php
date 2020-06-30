@@ -9,19 +9,23 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 
     <?php for ($i=0; $i<$list_count; $i++) {  ?>
 
- <h3 id="head1">
-       
+ <h3 class='title_Tail'>
+
 	<?php  echo $list[$i]['subject']; ?>
       </h3>
-       <p id="text1">
-            <?php
- echo $list[$i]['wr_content'];
+       <blockquote class='row'>
+       <div class="quote col-md-2 text-center"><i class="fa fa-quote-left fa-3x"></i></div>
+		<p  class='col-md-8 normalContent'>
+					<?php
+		 echo $list[$i]['wr_content'];
+					?>
+		</p>
+		<div class="quote col-md-2  text-center"><i class="fa fa-quote-right fa-3x"></i></div>
+		</blockquote>
 
-
-            ?>
-</p>   
     <?php }  ?>
     <?php if ($list_count == 0) { //게시물이 없을 때  ?>
     게시물이 없습니다.
     <?php }  ?>
 
+                       
