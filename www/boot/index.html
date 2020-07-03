@@ -174,8 +174,8 @@ include_once(G5_LIB_PATH.'/latest.lib.php');
       <div class="row" id="sbg">
         <div class="col-md-12">
           <div class="xodlf">
-
-            <div class="slideitem" data-dot-title="아이템" style='background:url(img/slideimg/slide0.jpg) no-repeat center top; background-size:100% auto'>
+<?php echo latest('slide','slide',4,500); ?>
+            <!-- <div class="slideitem" data-dot-title="아이템" style='background:url(img/slideimg/slide0.jpg) no-repeat center top; background-size:100% auto'>
               <div class="textbox1">
                 <h5 class="slideh5">l-series</h5>
                 <h6 class="slideh6">선택과집중</h6>
@@ -228,7 +228,7 @@ include_once(G5_LIB_PATH.'/latest.lib.php');
                 <div class="slidetext"><a href="http://www.buzzbee.co.kr/shop/goods/goods_view.php?goodsno=22046&category=002001039" target="_blank">자세히 알아보기</a></div>
               </div>
 
-            </div>
+            </div> -->
           </div>
           <div class="paginator-center text-color text-center">
             <span class="prev"><i class="xi-angle-left"></i></span>
@@ -401,12 +401,12 @@ include_once(G5_LIB_PATH.'/latest.lib.php');
     <div class="container"  id="head1">
 		 <h2 class='title_Tail'>L-series 리뷰</h2>
 
-      <div class="flqb">
+      
 
 
        <?php echo latest('youtube','youtube',3,500); ?>
 
-      </div>
+
     </div>
 
 

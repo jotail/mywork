@@ -44,7 +44,7 @@ flex-direction: column;
 -moz-box-pack: center;
 justify-content: center;
 display: flex;
-text-align: center;}
+text-align: center;background: #0000004d;border-radius:33px 120px;padding-bottom: 1%;}
 .slideh5 {font-size:1.3rem;color:#ddd;padding: 5px 20px;line-height: 1.66;letter-spacing: 2px;text-transform: uppercase;margin-bottom: 10px;}
 .slideh6 {font-size:3rem;color:#ddd;padding: 5px 20px}
 .xodlf span {font-size:0.8rem;color:#ddd;padding: 5px 20px}
@@ -188,4 +188,6 @@ blockquote .fa{color:#ccc; }
 .fa-quote-right{ margin-top:100px}
 .solar_panels_banner_area{ margin:0}
 
-.youtubeLatest{ background:#f1f1f1; margin: 15px 0 }
+.youtubeLatest{margin: 15px 0px;}
+.ybp{margin: 0 5%}
+#flqb2 {font-size: 3rem;}

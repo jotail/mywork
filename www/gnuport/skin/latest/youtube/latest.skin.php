@@ -13,15 +13,13 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 
   <div class="row youtubeLatest clear">
          <div class="col-md-6">
-          <div class="absparent ">
+          <div class="absparent">
             <iframe width="100%"  src="<?php  echo $list[$i]['wr_link1']; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
 	     </div>
 		  <div class='col-md-6'>
 		  <h4 id="flqb2"><?php  echo $list[$i]['subject']; ?></h4>
-		  <?php
-		 echo $list[$i]['wr_content'];
-					?>
+		 <p class="ybp"><?php  echo $list[$i]['wr_content'];?></p>
 		  </div>
 </div>
 <?php }  ?>
